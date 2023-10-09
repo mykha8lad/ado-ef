@@ -63,6 +63,22 @@
                         Click="Button4_Click"/>
                 <Button Content="SecDep" x:Name="Button5"
                         Click="Button5_Click"/>
+                <Button Content="N error" x:Name="Button6"
+                        Click="Button6_Click"/>
+                <Button Content="N right" x:Name="Button7"
+                        Click="Button7_Click"/>
+                <Button Content="8" x:Name="Button8"
+                        Click="Button8_Click"/>
+                <Button Content="9" x:Name="Button9"
+                        Click="Button9_Click"/>
+                <Button Content="10" x:Name="Button10"
+                        Click="Button10_Click"/>
+                <Button Content="11" x:Name="Button11"
+                        Click="Button11_Click"/>
+                <Button Content="12" x:Name="Button12"
+                        Click="Button12_Click"/>
+                <Button Content="13" x:Name="Button13"
+                        Click="Button13_Click"/>
             </WrapPanel>
             <ListView ItemsSource="{Binding Pairs}">
                 <ListView.View>
