@@ -11,11 +11,7 @@ public class Department
     public Guid Id { get; set; }
     public String Name { get; set; } = null!;
 
-    // додано для м'якого видалення
     public DateTime? DeleteDt { get; set; }
-
-    ///////// Inverse Navigation props /////////////////////
-
-    // MainManagers - зворотна до Manager.MainDep властивість
+    
     public IEnumerable<Manager> MainManagers { get; set; }
 }
