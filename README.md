@@ -47,3 +47,31 @@ ___
 [![photo-2023-10-09-17-59-47.jpg](https://i.postimg.cc/wTXj9WKB/photo-2023-10-09-17-59-47.jpg)](https://postimg.cc/9rfhpYQ3)
 [![photo-2023-10-09-18-01-25.jpg](https://i.postimg.cc/4yzsN3S0/photo-2023-10-09-18-01-25.jpg)](https://postimg.cc/gLkfgGdy)
 ___
+## Home work 05.09
+> * Д.З. У власних проєктах додати до сутностей навігаційні властивості
+> * Налаштувати їх відповідним чином
+> * Реалізувати зв'язки даних через ці елементи
+
+### Поки не взявся за власний проект, створив сутність із навігаційними властивостями у проекті класної роботи
+```cs
+private void ButtonNav3_Click(object sender, RoutedEventArgs e)
+{
+    var query = dataContext
+    .Managers
+    .Include(m => m.MainDep)
+    .Select(m => new Pair
+    {
+        Key = m.Id.ToString(),
+        Value = m.IdSecDep == null ? "--" : (m.Surname + ' ' + m.Name)
+    });
+
+    Pairs.Clear();
+    foreach (var pair in query)
+    {
+        Pairs.Add(pair);
+    }
+}
+```
+[![photo-2023-10-15-15-11-30.jpg](https://i.postimg.cc/VkVkXc4j/photo-2023-10-15-15-11-30.jpg)](https://postimg.cc/TKnxXFzw)
+___
+
