@@ -79,6 +79,12 @@
                         Click="Button12_Click"/>
                 <Button Content="13" x:Name="Button13"
                         Click="Button13_Click"/>
+                <Button Content="Nav1" x:Name="ButtonNav1"
+                        Click="ButtonNav1_Click"/>
+                <Button Content="Nav2" x:Name="ButtonNav2"
+                        Click="ButtonNav2_Click"/>
+                <Button Content="Nav3" x:Name="ButtonNav3"
+                        Click="ButtonNav3_Click"/>
             </WrapPanel>
             <ListView ItemsSource="{Binding Pairs}">
                 <ListView.View>

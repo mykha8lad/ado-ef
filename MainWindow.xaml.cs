@@ -359,6 +359,61 @@ public partial class MainWindow : Window
             Pairs.Add(pair);
         }
     }
+
+    private void ButtonNav1_Click(object sender, RoutedEventArgs e)
+    {
+        var query = dataContext
+                .Managers
+                .Include(m => m.MainDep) 
+                .Select(m => new Pair    
+                {
+                    Key = m.Surname,
+                    Value = m.MainDep.Name
+                })
+                .Take(7);
+
+        Pairs.Clear();
+        foreach (var pair in query)
+        {
+            Pairs.Add(pair);
+        }
+    }
+
+    private void ButtonNav2_Click(object sender, RoutedEventArgs e)
+    {
+        var query = dataContext
+                .Managers
+                .Include(m => m.SecDep)   
+                .Select(m => new Pair     
+                {
+                    Key = m.Surname,
+                    Value = m.SecDep == null ? "--" : m.SecDep.Name
+                });
+
+        Pairs.Clear();
+        foreach (var pair in query)
+        {
+            Pairs.Add(pair);
+        }
+    }
+
+    private void ButtonNav3_Click(object sender, RoutedEventArgs e)
+    {
+        var query = dataContext
+                .Managers
+                .Include(m => m.MainDep)
+                .Select(m => new Pair
+                {
+                    Key = m.Id.ToString(),
+                    Value = m.IdSecDep == null ? "--" : (m.Surname + ' ' + m.Name)
+                });
+
+        Pairs.Clear();
+        foreach (var pair in query)
+        {
+            Pairs.Add(pair);
+        }
+    }
 }
 
 public class Pair

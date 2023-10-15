@@ -25,14 +25,13 @@ public class DataContext : DbContext
     }
     // Microsoft SQL Server (SqlClient)
     protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {        
-        modelBuilder                          
-            .Entity<Manager>()                
-            .HasOne(m => m.MainDep)           
-            .WithMany(d => d.MainManagers)    
-            .HasForeignKey(m => m.IdMainDep)  
-            .HasPrincipalKey(d => d.Id);      
-                                                                                            
+    {
+        modelBuilder
+            .Entity<Manager>()
+            .HasOne(m => m.MainDep)
+            .WithMany()
+            .HasForeignKey(m => m.IdMainDep)
+            .HasPrincipalKey(d => d.Id);
 
         modelBuilder
             .Entity<Manager>()

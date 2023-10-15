@@ -55,6 +55,9 @@ namespace ADO_EF_P12.Migrations
                     b.Property<DateTime?>("DeleteDt")
                         .HasColumnType("datetime2");
 
+                    b.Property<Guid?>("DepartmentId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -94,6 +97,8 @@ namespace ADO_EF_P12.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DepartmentId");
+
                     b.HasIndex("IdMainDep");
 
                     b.HasIndex("IdSecDep");
@@ -103,8 +108,12 @@ namespace ADO_EF_P12.Migrations
 
             modelBuilder.Entity("ADO_EF_P12.Data.Entity.Manager", b =>
                 {
-                    b.HasOne("ADO_EF_P12.Data.Entity.Department", "MainDep")
+                    b.HasOne("ADO_EF_P12.Data.Entity.Department", null)
                         .WithMany("MainManagers")
+                        .HasForeignKey("DepartmentId");
+
+                    b.HasOne("ADO_EF_P12.Data.Entity.Department", "MainDep")
+                        .WithMany()
                         .HasForeignKey("IdMainDep")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
