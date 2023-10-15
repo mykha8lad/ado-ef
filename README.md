@@ -35,3 +35,15 @@ private void Button5_Click(object sender, RoutedEventArgs e)
 ```
 [![photo-2023-10-09-14-57-33.jpg](https://i.postimg.cc/qMYFXBnF/photo-2023-10-09-14-57-33.jpg)](https://postimg.cc/gnV4GWgy)
 ___
+## Home work 01.09
+> * Д.З. Засобами LINQ на основі створеної БД реалізувати запити
+> * Назва відділу -- кількість сумісників (SecDep)
+> * Запит з однофамільцями переробити з нумерацією
+>    1. Андріяш
+>    2. Лешків
+> * Вивести трьох співробітників з найбільшою кількістю підлеглих (к-сть підлеглих --- П.І.Б.)
+
+[![photo-2023-10-09-17-59-21.jpg](https://i.postimg.cc/Fs377rSN/photo-2023-10-09-17-59-21.jpg)](https://postimg.cc/KRcZWyQH)
+[![photo-2023-10-09-17-59-47.jpg](https://i.postimg.cc/wTXj9WKB/photo-2023-10-09-17-59-47.jpg)](https://postimg.cc/9rfhpYQ3)
+[![photo-2023-10-09-18-01-25.jpg](https://i.postimg.cc/4yzsN3S0/photo-2023-10-09-18-01-25.jpg)](https://postimg.cc/gLkfgGdy)
+___
